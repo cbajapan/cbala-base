@@ -15,7 +15,6 @@ initscripts \
 sudo \
 which \
 crontabs\
-net-tools\
 && yum clean all
 
 RUN wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" \
