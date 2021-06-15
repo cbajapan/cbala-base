@@ -15,7 +15,8 @@ wget \
 initscripts \
 sudo \
 which \
-crontabs\
+crontabs \
+unzip \
 && yum clean all
 
 RUN wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" \
