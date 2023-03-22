@@ -4,7 +4,7 @@ ENV JAVA_VERSION=8 \
 JAVA_UPDATE=391 \
 JAVA_BUILD=10 \
 JAVA_ARCH=x64 \
-JAVA_DL_URL=https://javadl.oracle.com/webapps/download/AutoDL?BundleId%3D247937_0ae14417abb444ebb02b9815e2103550
+JAVA_DL_URL=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=246254_165374ff4ea84ef0bbd821706e29b123
 
 RUN yum -y install \
 pango \
