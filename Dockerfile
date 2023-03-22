@@ -20,7 +20,7 @@ unzip \
 && yum clean all
 
 RUN wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-"http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/${JAVA_TOKEN}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-${JAVA_ARCH}.rpm" \
+"http://download.oracle.com/otn/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/${JAVA_TOKEN}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-${JAVA_ARCH}.rpm" \
 -O jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-${JAVA_ARCH}.rpm \
 && rpm -ivh jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-${JAVA_ARCH}.rpm \
 && rm jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-${JAVA_ARCH}.rpm
