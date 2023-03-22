@@ -3,8 +3,8 @@ FROM centos/systemd
 ENV JAVA_VERSION=8 \
 JAVA_UPDATE=291 \
 JAVA_BUILD=10 \
-JAVA_TOKEN=d7fc238d0cbf4b0dac67be84580cfb4b \
-JAVA_ARCH=x64
+JAVA_ARCH=x64 \
+JAVA_DL_URL=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=247926_0ae14417abb444ebb02b9815e2103550
 
 RUN yum -y install \
 pango \
@@ -20,7 +20,7 @@ unzip \
 && yum clean all
 
 RUN wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-"http://download.oracle.com/otn/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/${JAVA_TOKEN}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-${JAVA_ARCH}.rpm" \
+"{JAVA_DL_URL}" \
 -O jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-${JAVA_ARCH}.rpm \
 && rpm -ivh jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-${JAVA_ARCH}.rpm \
 && rm jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-${JAVA_ARCH}.rpm
